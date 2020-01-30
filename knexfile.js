@@ -6,6 +6,10 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL
   },
+  testing: {
+    client: 'pg',
+    connection: process.env.TESTING_DATABASE_URL
+  },
 
   staging: {
     client: 'postgresql',
