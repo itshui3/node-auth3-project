@@ -8,9 +8,13 @@ const db = knex(config);
 
 module.exports = {
   find, // find() - general fetch all
-
+  findByHaus, // findByHaus(haus) - fetch by haus
 }
 
 function find() {
   return db('users');
+}
+
+function findByHaus(haus) {
+  return db('users').where({ haus });
 }
